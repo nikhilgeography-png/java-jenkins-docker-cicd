@@ -15,9 +15,9 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Docker Build') {
             steps {
-                sh 'echo Deployment Successful'
+                sh 'docker build -t java-cicd-app .'
             }
         }
     }
